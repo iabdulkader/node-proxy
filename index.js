@@ -1,6 +1,8 @@
 const corsProxy = require("cors-anywhere");
+const dotenv = require("dotenv");
+dotenv.config();
 
-const host = "localhost"; // Replace with your desired hostname
+const host = process.env.HOST; // Replace with your desired hostname
 const port = 8080; // Replace with your desired port number
 
 const server = corsProxy.createServer({
